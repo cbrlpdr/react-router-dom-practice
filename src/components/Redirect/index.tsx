@@ -13,9 +13,14 @@ export const Redirect = () => {
         },1000);
 
         if(time<0){
-            navigate('/')
+            navigate('/about', {
+                state: 'Hi, I am a state from Redirect. Random value => ' + Math.floor(Math.random()*20)
+            });
         }
 
+        return () => {
+            clearTimeout(timeout.current)
+        }
     },[time]);
 
     return (<div><h1>Saindo em {time}</h1></div>);
