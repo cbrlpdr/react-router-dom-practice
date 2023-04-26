@@ -23,5 +23,5 @@ export const Redirect = () => {
         }
     },[time]);
 
-    return (<div><h1>Saindo em {time}</h1></div>);
+    return (<div><h1>Leaving in {time} seconds</h1></div>);
 }
